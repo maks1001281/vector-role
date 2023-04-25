@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Tox test') {
             steps {
-                sh ',molecule test'
+                sh 'molecule test'
             }
   }
  }

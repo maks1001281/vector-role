@@ -7,6 +7,7 @@ pipeline {
     stages {
         stage('git clone') {
             steps {
+    sh 'sudo rm -R $HOME/jenkins'
     sh 'git clone https://github.com/maks1001281/devops-netology.git $HOME/jenkins/'
     sh 'cd $HOME/jenkins/Home_work/8.4/'
     sh 'ansible-galaxy install -r requirements.yml vector --force'

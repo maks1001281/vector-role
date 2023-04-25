@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('cd work dir') {
             steps {
-                sh 'cd /etc/ansible/roles/vector/'
+                sh 'cd /etc/ansible/roles/vector'
             }
         }
         stage('Tox test') {

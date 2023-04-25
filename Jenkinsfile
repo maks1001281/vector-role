@@ -12,6 +12,7 @@ pipeline {
         }
         stage('Tox test') {
             steps {
+                dir('vector-role')
                 sh 'molecule test'
             }
   }

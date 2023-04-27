@@ -5,12 +5,12 @@ pipeline {
             }
       }
     stages {
-        stage('git clone') {
+        stage('Ansible install role') {
             steps {
     sh 'ansible-galaxy install -r requirements.yml vector --force'
             }
         }
-        stage('Tox test') {
+        stage('Molecule test podman') {
             steps {
                 dir('vector'){
                 sh 'molecule test'
